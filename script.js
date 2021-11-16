@@ -1,3 +1,9 @@
+song_url = 'https://ruby-3-music-box.herokuapp.com/songs/';
+playlist_url = 'https://ruby-3-music-box.herokuapp.com/playlists/';
+sp_url = 'https://ruby-3-music-box.herokuapp.com/song_in_playlists/';
+artist_url = 'https://ruby-3-music-box.herokuapp.com/artists/';
+album_url = 'https://ruby-3-music-box.herokuapp.com/albums/';
+
 function post(table_url, json_data) {
     $.post({ url: table_url, data:json_data , dataType: "json",
         error: function(errMsg) {

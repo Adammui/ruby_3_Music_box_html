@@ -11,7 +11,7 @@
     <script src="album.js"></script>
     <script src="song.js"></script>
     <script src="artist.js"></script>
-    <title>Title</title>
+    <title>Music_box</title>
 </head>
 <body >
 
@@ -19,7 +19,7 @@
     <h1> Playlists </h1>
     <div id="playlists_block">
         <p>
-            <input id="get_playlists" type="button" value="get playlists" onclick="get('http://localhost:3000/playlists/');" />
+            <input id="get_playlists" type="button" value="get playlists" onclick="get(playlist_url);" />
             <input id="post_playlists" type="button" value="new playlist" onclick="post_playlist();" />
             <input id="delete_playlists" type="button" value="delete playlist" onclick="delete_playlist();" />
             <input id="edit_playlists" type="button" value="edit playlist" onclick="edit_playlist();" />
@@ -32,7 +32,7 @@
     <h1> Songs </h1>
     <div id="songs_block">
         <p>
-            <input id="get_songs" type="button" value="get songs" onclick="get('https://ruby-3-music-box.herokuapp.com/');" />
+            <input id="get_songs" type="button" value="get songs" onclick="get(song_url);" />
             <input id="post_songs" type="button" value="new song" onclick="post_song();" />
             <input id="delete_songs" type="button" value="delete song" onclick="delete_song();" />
             <input id="edit_songs" type="button" value="edit song" onclick="edit_song();" />
@@ -47,7 +47,7 @@
     <h1> Songs in playlists </h1>
     <div id="song_playlists_block">
         <p>
-            <input id="get_sp" type="button" value="get songs in playlist" onclick="get('http://localhost:3000/song_in_playlists/');" />
+            <input id="get_sp" type="button" value="get songs in playlist" onclick="get(sp_url);" />
             <input id="post_sp" type="button" value="new sp" onclick="post_sp();" />
             <input id="delete_sp" type="button" value="delete sp" onclick="delete_sp();" />
         </p>
@@ -60,7 +60,7 @@
     <h1> Artists </h1>
     <div id="artist_block">
         <p>
-            <input id="get_artists" type="button" value="get artist" onclick="get('https://ruby-3-music-box.herokuapp.com/artists/');" />
+            <input id="get_artists" type="button" value="get artist" onclick="get(artist_url);" />
             <input id="post_artists" type="button" value="new artist" onclick="post_artist();" />
             <input id="delete_artists" type="button" value="delete artist" onclick="delete_artist();" />
             <input id="edit_artists" type="button" value="edit artist" onclick="edit_artist();" />
@@ -74,7 +74,7 @@
     <h1> Albums </h1>
     <div id="album_block">
         <p>
-            <input id="get_album" type="button" value="get album" onclick="get('http://localhost:3000/albums/');" />
+            <input id="get_album" type="button" value="get album" onclick="get(album_url);" />
             <input id="post_album" type="button" value="new album" onclick="post_album();" />
             <input id="delete_album" type="button" value="delete album" onclick="delete_album();" />
             <input id="edit_album" type="button" value="edit album" onclick="edit_album();" />

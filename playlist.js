@@ -1,6 +1,3 @@
-playlist_url = 'http://localhost:3000/playlists/';
-sp_url = 'http://localhost:3000/song_in_playlists/';
-
 function post_playlist(){
     let json= {"playlist_name": document.getElementById('playlist_name').value}
     post(playlist_url, json)

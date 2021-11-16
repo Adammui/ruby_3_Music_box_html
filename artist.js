@@ -1,5 +1,3 @@
-artist_url = 'https://ruby-3-music-box.herokuapp.com/artists/';
-
 function post_artist(){
     let json= {"group_name": document.getElementById('artist_name').value,
         "country": document.getElementById('artist_country').value}

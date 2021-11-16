@@ -1,5 +1,3 @@
-song_url = 'https://ruby-3-music-box.herokuapp.com/songs/';
-
 function post_song(){
     let json= {"song_name": document.getElementById('song_name').value,
         "genre": document.getElementById('song_genre').value,

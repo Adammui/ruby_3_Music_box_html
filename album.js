@@ -1,5 +1,3 @@
-album_url = 'http://localhost:3000/albums/';
-
 function post_album(){
     let json= {"album_name": document.getElementById('album_name').value,
         "release_date": document.getElementById('album_date').value,
