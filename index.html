@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="playlist.js"></script>
+    <script src="album.js"></script>
+    <script src="song.js"></script>
+    <script src="artist.js"></script>
+    <title>Title</title>
+</head>
+<body >
+
+<div id="categories" overflow="auto">
+    <h1> Playlists </h1>
+    <div id="playlists_block">
+        <p>
+            <input id="get_playlists" type="button" value="get playlists" onclick="get('http://localhost:3000/playlists/');" />
+            <input id="post_playlists" type="button" value="new playlist" onclick="post_playlist();" />
+            <input id="delete_playlists" type="button" value="delete playlist" onclick="delete_playlist();" />
+            <input id="edit_playlists" type="button" value="edit playlist" onclick="edit_playlist();" />
+        </p>
+        name <input id="playlist_name" type="text" value="name" title="playlist name"/>
+        id <input id="playlist_id" type="number" value="" title="id of playlist"/>
+        <div id="result_playlist"> </div>
+    </div>
+
+    <h1> Songs </h1>
+    <div id="songs_block">
+        <p>
+            <input id="get_songs" type="button" value="get songs" onclick="get('https://ruby-3-music-box.herokuapp.com/');" />
+            <input id="post_songs" type="button" value="new song" onclick="post_song();" />
+            <input id="delete_songs" type="button" value="delete song" onclick="delete_song();" />
+            <input id="edit_songs" type="button" value="edit song" onclick="edit_song();" />
+        </p>
+        name <input id="song_name" type="text" value="name" title="song name"/>
+        genre <input id="song_genre" type="text" value="genre" title="genre" />
+        album id <input id="song_album" type="number" value="" title="id of album"/>
+        id <input id="song_id" type="number" value="" title="id of song"/>
+        <div id="result_song"> </div>
+    </div>
+
+    <h1> Songs in playlists </h1>
+    <div id="song_playlists_block">
+        <p>
+            <input id="get_sp" type="button" value="get songs in playlist" onclick="get('http://localhost:3000/song_in_playlists/');" />
+            <input id="post_sp" type="button" value="new sp" onclick="post_sp();" />
+            <input id="delete_sp" type="button" value="delete sp" onclick="delete_sp();" />
+        </p>
+        song id <input id="sp_song" type="number" value="" title="id of song"/>
+        playlist id <input id="sp_playlist" type="number" value="" title="id of playlist"/>
+        sp id <input id="sp_id" type="number" value="" title="id of sp"/>
+        <div id="result_song_playlist"> </div>
+    </div>
+
+    <h1> Artists </h1>
+    <div id="artist_block">
+        <p>
+            <input id="get_artists" type="button" value="get artist" onclick="get('https://ruby-3-music-box.herokuapp.com/artists/');" />
+            <input id="post_artists" type="button" value="new artist" onclick="post_artist();" />
+            <input id="delete_artists" type="button" value="delete artist" onclick="delete_artist();" />
+            <input id="edit_artists" type="button" value="edit artist" onclick="edit_artist();" />
+        </p>
+        group <input id="artist_name" type="text" value="name" title="artist name"/>
+        country <input id="artist_country" type="text" value="country" title="country" />
+        id <input id="artist_id" type="number" value="" title="id of artist"/>
+        <div id="result_artist"> </div>
+    </div>
+
+    <h1> Albums </h1>
+    <div id="album_block">
+        <p>
+            <input id="get_album" type="button" value="get album" onclick="get('http://localhost:3000/albums/');" />
+            <input id="post_album" type="button" value="new album" onclick="post_album();" />
+            <input id="delete_album" type="button" value="delete album" onclick="delete_album();" />
+            <input id="edit_album" type="button" value="edit album" onclick="edit_album();" />
+        </p>
+        name <input id="album_name" type="text" value="name" title="alb name"/>
+        release date <input id="album_date" type="text" value="" title="date" />
+        artist id <input id="album_artist" type="number" value="" title="artist" />
+        id <input id="album_id" type="number" value="" title="id of alb"/>
+        <div id="result_album"> </div>
+    </div>
+</div>
+</body>
+</html>
